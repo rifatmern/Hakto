@@ -17,7 +17,7 @@ const Footer = () => {
                 <div className={`${Josef.className} flex text-[#8A8FB9]`}>
                     <div className="w-[40%]">
                         <div className="pb-[31px]">
-                            <Image src={logo} className='w-[98px] h-[30px]' />
+                            <Image src={logo} alt='logo' className='w-[98px] h-[30px]' />
                         </div>
                         <div className="flex pb-[25px]">
                             <input type="email" name="" id="" className='w-[266px] h-[40px] bg-[#D9D9D9] border rounded pl-2 outline-none' placeholder='Enter Email Address' />

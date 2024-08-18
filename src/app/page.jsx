@@ -1,8 +1,17 @@
+import Banner from '@/components/Banner'
+import Feapro from '@/components/Feapro'
+import Leapro from '@/components/Leapro'
+import Shopex from '@/components/Shopex'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>Hello</div>
+    <>
+      <Banner />
+      <Feapro />
+      <Leapro/>
+      <Shopex/>
+    </>
   )
 }
 

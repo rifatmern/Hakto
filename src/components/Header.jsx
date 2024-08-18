@@ -6,6 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import Container from './Container';
 import { Josefin_Sans } from 'next/font/google';
+import Link from 'next/link';
 
 const josef = Josefin_Sans(
     {
@@ -49,7 +50,7 @@ const Header = () => {
                                     <option value="">RUP</option>
                                 </select>
                             </li>
-                            <li className={`${josef.className} flex bg-[#7E33E0] text-white cursor-pointer items-center`} >login<CiUser className='ml-2' /></li>
+                            <li className={`${josef.className} flex bg-[#7E33E0] text-white cursor-pointer items-center`} ><Link href={"/login"}>login</Link><CiUser className='ml-2' /></li>
                             <li className={`${josef.className} flex bg-[#7E33E0] text-white cursor-pointer items-center`}>Wishlist<CiHeart className='ml-2' /></li>
                             <li className="flex bg-[#7E33E0] text-white cursor-pointer items-center"><CiShoppingCart className='ml-2' /></li>
                         </ul>
