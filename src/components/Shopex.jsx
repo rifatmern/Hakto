@@ -17,7 +17,7 @@ const lato = Lato({
 
 const CenteredContent = () => {
     return (
-        <div className="flex flex-wrap justify-center items-center min-h-screen gap-4">
+        <div className="flex flex-wrap justify-center items-center min-h-screen gap-x-5">
             <div className="w-[270px] pt-[56px] pb-[45px] text-center bg-white shadow-lg rounded-lg">
                 <Image src={shop1} alt="24/7 Support" className="mx-auto pb-[27px]" />
                 <h2 className={`${josef.className} text-xl font-bold mt-4 mb-[20px]`}>24/7 Support</h2>
