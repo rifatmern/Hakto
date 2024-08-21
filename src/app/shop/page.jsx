@@ -6,6 +6,7 @@ import { FaList } from "react-icons/fa6";
 import Shop from '@/components/props/Shop';
 import Image from 'next/image';
 import sponsor from '@/assets/sponsor.png'
+import Link from 'next/link';
 
 
 
@@ -74,7 +75,7 @@ const page = () => {
             <section className=''>
                 <Container>
                     <div className="flex flex-wrap items-center justify-center space-x-20">
-                        <Shop />
+                        <Link href="/Product-Details"><Shop /></Link>
                         <Shop />
                         <Shop />
                         <Shop />

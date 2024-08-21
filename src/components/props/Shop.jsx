@@ -44,6 +44,7 @@ const Shop = () => {
                     </ul>
                 </div>
             </div>
+
         </>
     )
 }

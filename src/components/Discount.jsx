@@ -35,46 +35,30 @@ const Discount = () => {
                     </div>
 
                     <div className="flex justify-center">
-                        <div className="w-[60%]">
+                        <div className="w-[50%]">
                             <div className="mt-[50px]">
                                 <h2 className={`${josef.className} font-bold text-[42px] text-[#0D0E43]`} >20% Discount Of All Products</h2>
                                 <p className={`${lato.className} font-semibold text-[#FB2E86]`}>Eams Sofa Compact</p>
                             </div>
-                            {/* <div className="">
-                                <div className="flex items-center">
-                                    <div className="h-[15px] w-[15px] bg-[#FB2E86] rounded-full"></div>
-                                    <div className="">
-                                        <h4 className={`${lato.className} font-normal text-[16px] text-[#ACABC3] ml-[20px] items-center `} >All frames constructed with hardwood solids and laminates</h4>
-                                    </div>
-                                </div>
-                                <div className="flex items-center">
-                                    <div className="h-[15px] w-[15px] bg-[#0D0E43] rounded-full"></div>
-                                    <div className="">
-                                        <h4 className={`${lato.className} font-normal text-[16px] text-[#ACABC3] ml-[20px] items-center`}  >Reinforced with double wood dowels, glue, screw - nails cornerblocks <br /> and machine nails</h4>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-center">
-                                    <div className="h-[15px] w-[15px] bg-[#05E6B7] rounded-full"></div>
-                                    <div className="">
-                                        <h4 className={`${lato.className} font-normal text-[16px] text-[#ACABC3] ml-[20px] items-center`}  >Arms, backs and seats are structurally reinforced</h4>
-                                    </div>
-                                </div>
+                            <div className="">
+                                <p className={`${lato.className} text-[#B7BACB] w-[523px] mt-[21px]`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget feugiat habitasse nec, bibendum condimentum.</p>
                             </div>
-
-                            <div className="flex mt-[50px] gap-6 items-center">
-                                <div className="">
-                                    <a href="" className={`${lato.className} font-semibold border-[1px] border-[#FB2E86] py-4 px-10 hover:bg-[#FB2E86] hover:text-white duration-500 rounded-sm`}>Add To Cart</a>
-                                </div>
-                                <div className="">
-                                    <h2 className={`${josef.className} font-bold text-[14px] text-[#0D0E43] `}>B&B Italian Sofa </h2>
-                                    <h3 className={`${josef.className} font-bold text-[14px] text-[#0D0E43] `}>$32.00</h3>
-                                </div>
-                            </div> */}
-
+                            <div className={`${lato.className} flex space-x-4 text-[#B7BACB] py-8`}>
+                                <ul className=''>
+                                    <li>Material expose like metals</li>
+                                    <li>Simple neutral colours.</li>
+                                </ul>
+                                <ul>
+                                    <li>Clear lines and geomatric figures</li>
+                                    <li>Material expose like metals</li>
+                                </ul>
+                            </div>
+                            <div className="mt-5">
+                                <a href="" className={`${lato.className} font-semibold border-[1px] border-[#FB2E86] py-4 px-10 hover:bg-[#FB2E86] hover:text-white duration-500 rounded-sm`}>Shop Now</a>
+                            </div>
                         </div>
-                        <div className="w-[40%]">
-                            <Image src={discount}/>
+                        <div className="w-[50%]">
+                            <Image src={discount} className='w-[]' />
                         </div>
                     </div>
                 </Container>
