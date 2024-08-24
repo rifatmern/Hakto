@@ -26,7 +26,7 @@ const Navbar = () => {
                             <li className={`${lato.className} hover:text-[#FB2E86]`}><Link href={""}>Pages</Link></li>
                             <li className={`${lato.className} hover:text-[#FB2E86]`}><Link href={"/shop"}>Products</Link></li>
                             <li className={`${lato.className} hover:text-[#FB2E86]`}><Link href={""}>Blog</Link></li>
-                            <li className={`${lato.className} hover:text-[#FB2E86]`}><Link href={"/shop-list"}>Shop</Link></li>
+                            <li className={`${lato.className} hover:text-[#FB2E86]`}><Link href={""}>Shop</Link></li>
                             <li className={`${lato.className} hover:text-[#FB2E86]`}><Link href={""}>Contact</Link></li>
                         </ul>
                     </div>

@@ -27,11 +27,11 @@ const Feacard = async () => {
         <>
 
             {
-                products?.map((item) => (
-                    <div className="relative w-[270px] h-[361px] flex flex-col overflow-hidden items-center text-center shadow-[0px_0px_20px_10px_rgba(246,247,251,1)] group">
+                products?.map((item, index) => (
+                    <div key={index} className="relative w-[270px] h-[361px] flex flex-col overflow-hidden items-center text-center shadow-[0px_0px_20px_10px_rgba(246,247,251,1)] group">
 
                         <div className="h-[236px] w-[270px] flex items-center bg-gray-100 group-hover:bg-[#F7F7F7] justify-center transition duration-500 ease-in-out">
-                            <Image src={item.thumbnail} alt="feapro" className="w-[200px] h-[400px]" width={236} height={270} />
+                            <Image src={item.thumbnail} alt="feapro" width={200} height={200} />
                         </div>
                         <div className={`${lato.className} w-full flex flex-col items-center pt-[27px] pb-[17px] bg-white group-hover:bg-[rgba(47,26,196,1)] duration-500 ease-in-out`}>
                             <h2 className="font-bold text-[18px] text-[#FB2E86] group-hover:text-white duration-500 ease-in-out">{item.title}</h2>

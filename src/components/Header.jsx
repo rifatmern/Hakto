@@ -52,7 +52,7 @@ const Header = () => {
                             </li>
                             <li className={`${josef.className} flex bg-[#7E33E0] text-white cursor-pointer items-center`} ><Link href={"/login"}>login</Link><CiUser className='ml-2' /></li>
                             <li className={`${josef.className} flex bg-[#7E33E0] text-white cursor-pointer items-center`}>Wishlist<CiHeart className='ml-2' /></li>
-                            <li className="flex bg-[#7E33E0] text-white cursor-pointer items-center"><CiShoppingCart className='ml-2' /></li>
+                            <li className="flex bg-[#7E33E0] text-white cursor-pointer items-center"><Link href={"/cart"}><CiShoppingCart className='ml-2' /></Link></li>
                         </ul>
                     </div>
                 </div>

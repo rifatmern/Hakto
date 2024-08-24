@@ -5,6 +5,7 @@ import feapro from '@/assets/leapro.png'
 import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CiZoomIn } from "react-icons/ci";
+import api from '@/uitils/Api';
 
 
 const josef = Josefin_Sans({
@@ -17,7 +18,9 @@ const lato = Lato({
     weight: ['100', '400', '700']
 })
 
-const Leacard = () => {
+const Leacard = async () => {
+    // let { products } = await api("https://dummyjson.com/products")
+
     return (
         <>
             <div className="relative w-[360px] h-[306] flex flex-col overflow-hidden items-center bg-gray-100 text-center shadow-[0px_0px_20px_10px_rgba(246,247,251,1)] group">

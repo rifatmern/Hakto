@@ -61,7 +61,7 @@ const page = () => {
                                 <div className="flex items-center space-x-2 text-sm text-[#3F509E]">
                                     <p>View:</p>
                                     <LuLayoutGrid className="text-base" />
-                                    <FaList className="text-base" />
+                                    <Link href={"/shop-list"}><FaList className="text-base" /></Link>
                                 </div>
                                 <div>
                                     <input type="text" className='w-[130px] h-[28px] outline-none border border-[rgba(231, 230, 239, 1)] text-sm px-2' />

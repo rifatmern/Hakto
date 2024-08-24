@@ -6,6 +6,7 @@ import { FaList } from "react-icons/fa6";
 import Image from 'next/image';
 import List from '@/components/props/List';
 import sponsor from '@/assets/sponsor.png'
+import Link from 'next/link';
 
 
 const josef = Josefin_Sans({
@@ -53,7 +54,7 @@ const page = () => {
                             <div className="flex items-center space-x-10">
                                 <div className="flex items-center space-x-2 text-sm text-[#3F509E]">
                                     <p>View:</p>
-                                    <LuLayoutGrid className="text-base" />
+                                    <Link href={"/shop"}><LuLayoutGrid className="text-base" /></Link>
                                     <FaList className="text-base" />
                                 </div>
                                 <div>
