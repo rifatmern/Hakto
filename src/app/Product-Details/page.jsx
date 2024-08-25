@@ -3,14 +3,13 @@ import { Josef, lato } from '@/uitils/Font'
 import React from 'react'
 import { FaInstagram, FaFacebook, FaRegStar, FaStar, FaArrowRight } from 'react-icons/fa'
 import { CiTwitter, CiHeart } from "react-icons/ci";
-import api from '@/uitils/Api';
+import Link from 'next/link';
 
 
 
 
-const page = async () => {
-    let { products } = await api("https://dummyjson.com/products")
-    console.log(products);
+const page =  () => {
+
     
 
     return (
@@ -25,21 +24,20 @@ const page = async () => {
             </section>
             <section>
                 <Container>
-                    {
-                        products?.map((item,index) => (
-                            <div key={index} className="mainBox flex py-[100px] gap-[40px] w-[100%]">
+                    
+                            <div className="mainBox flex py-[100px] gap-[40px] w-[100%]">
                                 <div className=" ProdectImgBox flex h-[390px] gap-[10px] w-[50%]">
                                     <div className="miniimgbox w-[25%]">
-                                        <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={item.thumbnail} width={100} height={125} alt="" />
-                                        <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={item.thumbnail} width={100} height={125} alt="" />
-                                        <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={item.thumbnail} width={100} height={125} alt="" />
+                                        <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={"#"} width={100} height={125} alt="" />
+                                        <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={"#"} width={100} height={125} alt="" />
+                                        <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={"#"} width={100} height={125} alt="" />
                                     </div>
                                     <div className=" w-[75%]">
-                                        <img src={item.thumbnail} className='h-[391px] w-[100%] border-[1px] border-[#9e9e9e] rounded-[6px]' alt="" />
+                                        <img src={'#'} className='h-[391px] w-[100%] border-[1px] border-[#9e9e9e] rounded-[6px]' alt="" />
                                     </div>
                                 </div>
                                 <div className="ProdectDetailBox w-[50%] py-[30px]">
-                                    <h2 className={`${Josef.className} text-[36px] font-[700]`}>{item.title}</h2>
+                                    <h2 className={`${Josef.className} text-[36px] font-[700]`}>Playwood arm chair</h2>
                                     <div className="review mb-[10px] items-center gap-4 flex">
                                         <div className="reating flex item-center">
                                             <FaRegStar />
@@ -53,12 +51,13 @@ const page = async () => {
                                         </div>
                                     </div>
                                     <icon></icon>
-                                    <h3 className='text-[16px] text-[#151875] font-[600] mb-[10px]'>${item.price}<span className=' ml-[10px] text-[#FB2E86]'>{item.discountPercentage}% <span className=' uppercase '>discount</span></span> </h3>
+                                    <h3 className='text-[16px] text-[#151875] font-[600] mb-[10px]'>$3200<span className=' ml-[10px] text-[#FB2E86]'>20% <span className=' uppercase '>discount</span></span> </h3>
                                     <p className='text-[#8A8FB9] w-[549px] font-[600] text-[16px] mb-[10px] block'></p>
-                                    <h2 className=' pb-[10px] text-[20px] text-[#FB2E86] font-[700]'>Stock : <span className='font-[500] text-[#000]'>{item.stock}</span></h2>
-                                    <p className={`${Josef.className} flex w-[200px] font-semibold text-[16px] py-4 justify-center mt-[10px] items-center gap-x-2 border border-[#FB2E86]`}>Add To cart<CiHeart className='text-[25px]' /></p>
-                                    <h2 className={`${Josef.className} pt-[30px] text-[#151875] font-semibold`}>Categories: {item.category}</h2>
-                                    <h2 className={`${Josef.className} pt-[10px] text-[#151875] font-semibold`}>Tags: #{item.tags}</h2>
+                                    <h2 className=' pb-[10px] text-[20px] text-[#FB2E86] font-[700]'>Stock : <span className='font-[500] text-[#000]'>5</span></h2>
+                                    <Link href={"/cart"}><p className={`${Josef.className} flex w-[200px] font-semibold text-[16px] py-4 justify-center mt-[10px] items-center gap-x-2 border border-[#FB2E86]`}>Add To cart<CiHeart className='text-[25px]' /></p>
+                                    </Link>
+                                    <h2 className={`${Josef.className} pt-[30px] text-[#151875] font-semibold`}>Categories: </h2>
+                                    <h2 className={`${Josef.className} pt-[10px] text-[#151875] font-semibold`}>Tags: #</h2>
                                     <div className="flex space-x-3 items-center">
                                         <h2 className={`${Josef.className} pt-[10px] text-[#151875] font-semibold`}>Share</h2>
                                         <div className="flex space-x-3">
@@ -69,8 +68,7 @@ const page = async () => {
                                     </div>
                                 </div>
                             </div>
-                        ))
-                    }
+                    
 
                 </Container>
             </section>

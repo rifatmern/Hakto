@@ -1,4 +1,4 @@
-import { Josefin_Sans, Lato } from 'next/font/google'
+import { Josefin_Sans, Lato } from "next/font/google"
 
 const lato = Lato({
     subsets: ["latin"],
