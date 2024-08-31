@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useContext } from 'react'
 import { Josefin_Sans, Lato } from 'next/font/google';
 import Container from '@/components/Container';
@@ -74,21 +76,12 @@ const page = () => {
 
             <section className=''>
                 <Container>
-                    <div className="flex flex-wrap items-center justify-center space-x-20">
-                        <Link href="/Product-Details"><Shop /></Link>
-                        <Shop />
-                        <Shop />
-                        <Shop />
-                    </div>
                     <div className="flex flex-wrap justify-center space-x-20 mt-[40px]">
-                        <Shop />
-                        <Shop />
-                        <Shop />
                         <Shop />
                     </div>
 
                     <div className="flex justify-center py-[83px]">
-                        <Image src={sponsor}/>
+                        <Image src={sponsor} />
                     </div>
                 </Container>
             </section>

@@ -30,16 +30,15 @@ const Shop = async () => {
                             <Image src={item.thumbnail} width={201} height={201} alt="feapro" className="object-cover h-[201px] w-[201px] pt-[33px] pb-[7px]" />
                         </div>
 
-                        <div className={`${josef.className} flex flex-col justify-between w-full items-center  bg-white duration-500 ease-in-out pt-[18px]`}>
-                            <h2 className="font-bold text-[18px] text-[#151875] duration-500 ease-in-out">Comfort Handy Craft</h2>
+                        <div className={`${josef.className} flex flex-col justify-between w-full items-center  bg-white duration-500 ease-in-out pt-[18px] pb-[10px]`}>
+                            <h2 className="font-bold text-[18px] text-[#151875] duration-500 ease-in-out">{item.title}</h2>
 
                             <div className="flex justify-center pb-[8px] space-x-2">
                                 <div className="w-3 h-3 rounded-full bg-[#05E6B7]  duration-500 ease-in-out"></div>
                                 <div className="w-3 h-3 rounded-full bg-[#F701A8]  duration-500 ease-in-out"></div>
                                 <div className="w-3 h-3 rounded-full bg-[#00009D]  duration-500 ease-in-out"></div>
                             </div>
-
-                            <p className="font-medium text-[14px]  text-[#FB2448] duration-500 ease-in-out">$42.00 <span className='ml-2 line-through'>$65.00</span></p>
+                            <p className="font-medium text-[14px]  text-[#FB2448] duration-500 ease-in-out">${item.price} <span className='ml-2 line-through'>${item.price}</span></p>
                         </div>
 
                         <div className="absolute left-0 bottom-[-100px] group-hover:bottom-[0px] top-1 duration-700 ease-in-out flex items-center">

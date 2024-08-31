@@ -1,8 +1,14 @@
+"use client"
 import { Josefin_Sans, Lato } from 'next/font/google';
 import React from 'react';
 import Container from './Container';
 import Feacard from './props/Feacard';
 import Link from 'next/link';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import api from '@/uitils/Api';
+
 
 
 const josef = Josefin_Sans({
@@ -15,16 +21,33 @@ const lato = Lato({
     weight: ['100', '400', '700'],
 });
 
-const Feapro = () => {
+const Feapro = async (item, index) => {
+    let { products } = await api("https://dummyjson.com/products")
+
+
+    const settings = {
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+    };
+
+
     return (
-        <section className="pt-[129px] pb-[120px]">
+        <section key={index} className="pt-[129px] pb-[120px]">
             <Container>
                 <div className="text-center">
                     <h1 className={`${josef.className} text-[42px] font-bold pb-[48px]`}>Featured Products</h1>
                 </div>
-                <div className="flex justify-center flex-wrap space-x-5">
-                <Feacard />
-                </div>
+                <Slider {...settings}>
+                    {
+                        products?.map((item) => (
+                            <Link href={"/shop"}>< Feacard item={item} /></Link>
+                        ))
+                    }
+                </Slider>
             </Container>
         </section>
     );

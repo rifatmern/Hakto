@@ -8,6 +8,7 @@ import Topcata from '@/components/Topcata'
 import Trendpro from '@/components/Trendpro'
 import Unique from '@/components/Unique'
 import React from 'react'
+import Slice from './redux/Slice'
 
 const page = () => {
   return (

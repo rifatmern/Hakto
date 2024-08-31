@@ -39,7 +39,7 @@ const Navbar = () => {
                     <div>
                         <ul className={`${lato.className} flex gap-x-6 items-center`}>
                             <li className="hover:text-[#FB2E86]"><Link href="/">Home</Link></li>
-                            <li className="hover:text-[#FB2E86]"><Link href="/pages">Pages</Link></li>
+                            <li className="hover:text-[#FB2E86]"><Link href="/about-us">Pages</Link></li>
                             <li className="hover:text-[#FB2E86]"><Link href="/shop">Products</Link></li>
                             <li className="hover:text-[#FB2E86]"><Link href="/blog">Blog</Link></li>
                             <li className="hover:text-[#FB2E86]"><Link href="/shop">Shop</Link></li>
