@@ -20,6 +20,7 @@ const lato = Lato({
 });
 
 const page = () => {
+
     return (
         <>
             <section>
@@ -68,17 +69,11 @@ const page = () => {
 
             <section>
                 <Container>
-                    <List/>
-                    <List/>
-                    <List/>
-                    <List/>
-                    <List/>
-                    <List/>
-                    <List/>
-                    <List/>
-
+                    <div className="">
+                        <List />
+                    </div>
                     <div className="flex justify-center pt-[200px] pb-[115px]">
-                        <Image src={sponsor}/>
+                        <Image src={sponsor} />
                     </div>
                 </Container>
             </section>

@@ -6,7 +6,6 @@ import { Josef, lato } from '@/uitils/Font';
 
 const page = () => {
     const [cartItems, setCartItems] = useState([
-        // Initialize with some default items
         {
             title: 'Sample Item',
             price: 32.00,
@@ -26,7 +25,6 @@ const page = () => {
     };
 
     const handleUpdateCart = () => {
-        // Handle cart update logic here
         calculateTotals();
     };
 

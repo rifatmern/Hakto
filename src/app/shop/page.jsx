@@ -27,6 +27,7 @@ const lato = Lato({
 
 const page = () => {
 
+    const itemsPerPage = 8; // Set the number of items per page
 
 
     return (
@@ -76,8 +77,8 @@ const page = () => {
 
             <section className=''>
                 <Container>
-                    <div className="flex flex-wrap justify-center space-x-20 mt-[40px]">
-                        <Shop />
+                    <div className="flex flex-wrap justify-center">
+                        <Shop itemsPerPage={itemsPerPage}  />
                     </div>
 
                     <div className="flex justify-center py-[83px]">

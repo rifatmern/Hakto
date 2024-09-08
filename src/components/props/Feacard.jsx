@@ -39,8 +39,8 @@ const Feacard = async ({ item, index }) => {
                     <p className="font-medium text-[14px] mt-[12px] text-[#151875] group-hover:text-white duration-500 ease-in-out">${item.price}</p>
                 </div>
 
-                <div className="absolute left-[-100px] group-hover:left-[0px] top-1 duration-700 ease-in-out flex items-center">
-                    <ul className="flex pr-5 z-40 space-x-3 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0 transition-all duration-700 ease-in-out">
+                <div className="absolute left-[-100px] group-hover:left-[5px] top-2 duration-700 ease-in-out flex items-center">
+                    <ul className="flex pr-7 z-40 space-x-3 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-0 transition-all duration-700 ease-in-out">
                         <CiShoppingCart className="text-[25px] cursor-pointer  scale-0 group-hover:scale-100 transform transition-transform duration-500 ease-in-out" />
                         <CiHeart className="text-[25px] cursor-pointer  scale-0 group-hover:scale-100 transform transition-transform duration-700 ease-in-out" />
                         <CiZoomIn className="text-[25px] cursor-pointer  scale-0 group-hover:scale-100 transform transition-transform duration-900 ease-in-out" />

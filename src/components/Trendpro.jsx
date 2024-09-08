@@ -28,9 +28,6 @@ const Trendpro = () => {
                     </div>
                     <div className="flex flex-wrap justify-center space-x-9">
                         <Shop />
-                        <Shop />
-                        <Shop />
-                        <Shop />
                     </div>
                 </Container>
             </section>
