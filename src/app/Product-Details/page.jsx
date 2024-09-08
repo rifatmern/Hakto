@@ -4,6 +4,7 @@ import React from 'react'
 import { FaInstagram, FaFacebook, FaRegStar, FaStar, FaArrowRight } from 'react-icons/fa'
 import { CiTwitter, CiHeart } from "react-icons/ci";
 import Link from 'next/link';
+import Image from 'next/image'
 
 
 
