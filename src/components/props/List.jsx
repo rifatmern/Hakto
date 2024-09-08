@@ -38,7 +38,7 @@ const List = () => {
                 <div key={index} className="flex items-center px-3 space-x-8 py-6">
                     <div className="">
                         <div className="w-[313px] h-[217px]">
-                            <Image src={item.thumbnail} width={313} height={217} className="w-[313px] h-[217px]" alt={item.title} />
+                            <Image src={item.thumbnail} width={313} height={217} className="w-[313px] h-[217px]" alt="#" />
                         </div>
                     </div>
                     <div className="">

@@ -73,7 +73,7 @@ const page = () => {
                         <List />
                     </div>
                     <div className="flex justify-center pt-[200px] pb-[115px]">
-                        <Image src={sponsor} />
+                        <Image src={sponsor} alt='#'/>
                     </div>
                 </Container>
             </section>

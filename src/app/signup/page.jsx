@@ -139,7 +139,7 @@ const Signup = () => {
                     </div>
                 </div>
                 <div className="flex justify-center items-center mb-[109px]">
-                    <Image src={sponsor} alt="Sponsor Image" />
+                    <Image src={sponsor} alt="Sponsor_Image" />
                 </div>
             </section>
         </>

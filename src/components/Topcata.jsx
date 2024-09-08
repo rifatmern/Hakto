@@ -17,7 +17,7 @@ const Topcata = () => {
                 <div className=" flex justify-center space-x-[50px] ">
                     <div className="flex flex-col w-[269px] h-[345px]">
                         <div className="w-[269px] h-[269px] bg-[#F6F7FB] rounded-full text-center items-center py-[46px] px-[40px]">
-                            <Image src={top} className='' />
+                            <Image src={top} alt='#' className='' />
                         </div>
                         <div className={`${Josef.className} text-center`}>
                             <h3 className={`${Josef.className} font-medium text-[20px] text-[#151875]`}>Mini LCW Chair</h3>
@@ -26,7 +26,7 @@ const Topcata = () => {
                     </div>
                     <div className="flex flex-col w-[269px] h-[345px]">
                         <div className="w-[269px] h-[269px] bg-[#F6F7FB] rounded-full text-center items-center py-[46px] px-[40px]">
-                            <Image src={top} className='' />
+                            <Image src={top} alt='#' className='' />
                         </div>
                         <div className={`${Josef.className} text-center`}>
                             <h3 className={`${Josef.className} font-medium text-[20px] text-[#151875]`}>Mini LCW Chair</h3>
@@ -35,7 +35,7 @@ const Topcata = () => {
                     </div>
                     <div className="flex flex-col w-[269px] h-[345px]">
                         <div className="w-[269px] h-[269px] bg-[#F6F7FB] rounded-full text-center items-center py-[46px] px-[40px]">
-                            <Image src={top} className='' />
+                            <Image src={top} alt='#' className='' />
                         </div>
                         <div className={`${Josef.className} text-center`}>
                             <h3 className={`${Josef.className} font-medium text-[20px] text-[#151875]`}>Mini LCW Chair</h3>
@@ -44,7 +44,7 @@ const Topcata = () => {
                     </div>
                     <div className="flex flex-col w-[269px] h-[345px]">
                         <div className="w-[269px] h-[269px] bg-[#F6F7FB] rounded-full text-center items-center py-[46px] px-[40px]">
-                            <Image src={top} className='' />
+                            <Image src={top} alt='#' className='' />
                         </div>
                         <div className={`${Josef.className} text-center`}>
                             <h3 className={`${Josef.className} font-medium text-[20px] text-[#151875]`}>Mini LCW Chair</h3>
@@ -65,7 +65,7 @@ const Topcata = () => {
             </div>
             <Container>
                 <div className="py-[96px] flex justify-center">
-                    <Image src={Sponsor} />
+                    <Image src={Sponsor} alt='#' />
                 </div>
             </Container>
         </section>

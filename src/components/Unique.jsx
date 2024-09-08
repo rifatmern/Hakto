@@ -19,7 +19,7 @@ const Unique = () => {
             <Container>
                 <div className="flex justify-center space-x-8">
                     <div className="w-[40%]">
-                        <Image src={unique} />
+                        <Image src={unique} alt='#' />
                     </div>
                     <div className="w-[60%]">
                         <div className="mt-[50px]">

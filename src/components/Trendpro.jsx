@@ -38,21 +38,21 @@ const Trendpro = () => {
                             <div className="w-[420px] h-[270px] bg-[#FFF6FB] relative px-8">
                                 <h2 className={`${Josef.className} text-[26] text-[#151875] font-semibold pt-[34px]`}>23% off in all products</h2>
                                 <p className={`${lato.className} font-normal text-[16px] hover:underline hover:text-[#FB2E86]`}>Shop Now</p>
-                                <Image src={trend} className=' absolute right-0 bottom-0 mb-1 w-[213px] h-[207px]' />
+                                <Image src={trend} alt='#' className=' absolute right-0 bottom-0 mb-1 w-[213px] h-[207px]' />
                             </div>
                         </div>
                         <div className="w-[29%]">
                             <div className="w-[420px] h-[270px] bg-[#FFF6FB] relative px-8">
                                 <h2 className={`${Josef.className} text-[26] text-[#151875] font-semibold pt-[34px]`}>23% off in all products</h2>
                                 <p className={`${lato.className} font-normal text-[16px] hover:underline hover:text-[#FB2E86]`}>View Collection</p>
-                                <Image src={trend2} className=' absolute right-0 bottom-0 mb-1 w-[213px] h-[207px]' />
+                                <Image src={trend2} alt='#' className=' absolute right-0 bottom-0 mb-1 w-[213px] h-[207px]' />
                             </div>
                         </div>
                         
                         <div className="w-[20%] flex flex-col justify-between">
                             <div className="flex justify-between items-center">
                                 <div className="bg-[#F5F6F8] w-[107px] h-[74px] flex justify-center">
-                                    <Image src={trenpro1}/>
+                                    <Image src={trenpro1} alt='#'/>
                                 </div>
                                 <div className="">
                                     <h1 className={`${Josef.className} font-normal text-[#151875] text-[14px]`}>Executive Seat chair</h1>
@@ -61,7 +61,7 @@ const Trendpro = () => {
                             </div>
                             <div className="flex justify-between items-center">
                                 <div className="bg-[#F5F6F8] w-[107px] h-[74px] flex justify-center">
-                                    <Image src={trenpro2}/>
+                                    <Image src={trenpro2} alt='#'/>
                                 </div>
                                 <div className="">
                                     <h1 className={`${Josef.className} font-normal text-[#151875] text-[14px]`}>Executive Seat chair</h1>
@@ -70,7 +70,7 @@ const Trendpro = () => {
                             </div>
                             <div className="flex justify-between items-center">
                                 <div className="bg-[#F5F6F8] w-[107px] h-[74px] flex justify-center">
-                                    <Image src={trenpro3}/>
+                                    <Image src={trenpro3} alt='#'/>
                                 </div>
                                 <div className="">
                                     <h1 className={`${Josef.className} font-normal text-[#151875] text-[14px]`}>Executive Seat chair</h1>

@@ -15,7 +15,7 @@ const Leatestblog = () => {
                 <div className="flex  justify-center space-x-10">
                 <div className=" w-[370px] h-[494px]">
                     <div className="">
-                        <Image src={leablog1} />
+                        <Image src={leablog1} alt='#' />
                     </div>
                     <div className="pt-[19px] pb-[35px]">
                         <h5 className={`${lato.className} font-bold text-[22px] text-[#0D0E43] mt-[20px]`}>SaberAli</h5>
@@ -27,7 +27,7 @@ const Leatestblog = () => {
                 </div>
                 <div className=" w-[370px] h-[494px]">
                     <div className="">
-                        <Image src={leablog1} />
+                        <Image src={leablog1} alt='#'/>
                     </div>
                     <div className="pt-[19px] pb-[35px]">
                         <h5 className={`${lato.className} font-bold text-[22px] text-[#0D0E43] mt-[20px]`}>SaberAli</h5>
@@ -39,7 +39,7 @@ const Leatestblog = () => {
                 </div>
                 <div className=" w-[370px] h-[494px]">
                     <div className="">
-                        <Image src={leablog1} />
+                        <Image src={leablog1} alt='#'/>
                     </div>
                     <div className="pt-[19px] pb-[35px]">
                         <h5 className={`${lato.className} font-bold text-[22px] text-[#0D0E43] mt-[20px]`}>SaberAli</h5>

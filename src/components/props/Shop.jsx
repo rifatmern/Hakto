@@ -53,7 +53,7 @@ const Shop = () => {
                                 src={item.thumbnail}
                                 width={201}
                                 height={201}
-                                alt={item.title}
+                                alt="#"
                                 className="object-cover h-[201px] w-[201px] pt-[33px] pb-[7px]"
                             />
                         </div>

@@ -22,7 +22,7 @@ const page = () => {
                 <Container>
                     <div className="flex justify-center">
                         <div className="w-[50%]">
-                            <Image src={about} className='w-[570px] h-[409px]' />
+                            <Image src={about} alt='About' className='w-[570px] h-[409px]' />
                         </div>
                         <div className="w-[50%]">
                             <div className="mt-[50px]">

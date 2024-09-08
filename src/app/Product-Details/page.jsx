@@ -26,12 +26,12 @@ const page = () => {
                     <div className="mainBox flex py-[100px] gap-[40px] w-[100%]">
                         <div className=" ProdectImgBox flex h-[390px] gap-[10px] w-[50%]">
                             <div className="miniimgbox w-[25%]">
-                                <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={"#"} width={100} height={125} alt="" />
-                                <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={"#"} width={100} height={125} alt="" />
-                                <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={"#"} width={100} height={125} alt="" />
+                                <Image className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={"#"} width={100} height={125} alt="" />
+                                <Image className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={"#"} width={100} height={125} alt="" />
+                                <Image className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={"#"} width={100} height={125} alt="" />
                             </div>
                             <div className=" w-[75%]">
-                                <img src={'#'} className='h-[391px] w-[100%] border-[1px] border-[#9e9e9e] rounded-[6px]' alt="" />
+                                <Image src={'#'} className='h-[391px] w-[100%] border-[1px] border-[#9e9e9e] rounded-[6px]' alt="" />
                             </div>
                         </div>
                         <div className="ProdectDetailBox w-[50%] py-[30px]">
@@ -110,7 +110,7 @@ const page = () => {
                         <h2 className={`${Josef.className} font-bold text-[36px] text-[#0D0E43] mt-[20px]`}>Related Products</h2>
                         <div className="lg:flex justify-between mt-[40px]">
                             <div className="lg:w-[24%] w-full">
-                                <img className='w-full' src={"#"} alt="" />
+                                <Image className='w-full' src={"#"} alt="" />
                                 <div className="flex justify-between px-2">
                                     <div className="">
                                         <h4 className='font-Sans font-bold text-[16px] text-[#0D0E43] mt-[20px] '>Mens Fashion Wear</h4>

@@ -58,7 +58,7 @@ const Discount = () => {
                             </div>
                         </div>
                         <div className="w-[50%]">
-                            <Image src={discount} className='w-[]' />
+                            <Image src={discount} alt='#' className='w-[]' />
                         </div>
                     </div>
                 </Container>

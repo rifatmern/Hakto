@@ -82,7 +82,7 @@ const page = () => {
                     </div>
 
                     <div className="flex justify-center py-[83px]">
-                        <Image src={sponsor} />
+                        <Image src={sponsor} alt='#'/>
                     </div>
                 </Container>
             </section>
