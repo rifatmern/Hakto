@@ -5,17 +5,11 @@ import feapro from '@/assets/leapro.png'
 import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CiZoomIn } from "react-icons/ci";
-import api from '@/uitils/Api';
 
 
 const josef = Josefin_Sans({
     subsets: ['latin'],
     weight: ['200', '400', '700']
-})
-
-const lato = Lato({
-    subsets: ['latin'],
-    weight: ['100', '400', '700']
 })
 
 const Leacard = async () => {

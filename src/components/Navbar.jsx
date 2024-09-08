@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import Container from './Container';
 import Image from 'next/image';
 import logo from "@/assets/Hekto.png";
