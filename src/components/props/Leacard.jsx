@@ -1,4 +1,4 @@
-import { Josefin_Sans, Lato } from 'next/font/google'
+import { Josefin_Sans } from 'next/font/google'
 import React from 'react'
 import Image from 'next/image'
 import feapro from '@/assets/leapro.png'

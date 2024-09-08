@@ -1,6 +1,6 @@
 "use client";
 
-import { Josefin_Sans, Lato } from 'next/font/google';
+import { Josefin_Sans } from 'next/font/google';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { CiShoppingCart, CiHeart, CiZoomIn } from "react-icons/ci";
@@ -11,10 +11,6 @@ const josef = Josefin_Sans({
     weight: ['200', '400', '700'],
 });
 
-const lato = Lato({
-    subsets: ['latin'],
-    weight: ['100', '400', '700'],
-});
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
