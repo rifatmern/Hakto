@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import { useState } from 'react';
 import Container from '@/components/Container';
 import Addcart from '@/components/props/Addcart';
 import { Josef, lato } from '@/uitils/Font';
 
-const page = () => {
+const Page = () => {  // Changed to uppercase
     const [cartItems, setCartItems] = useState([
         {
             title: 'Sample Item',
@@ -35,7 +35,6 @@ const page = () => {
     };
 
     const handleCalculateShipping = () => {
-        // Example shipping calculation logic
         setShippingCost(10); // Example flat rate shipping cost
         calculateTotals();
     };
@@ -145,4 +144,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

@@ -1,5 +1,5 @@
 "use client";
-import { Josefin_Sans, Lato } from 'next/font/google';
+import { Josefin_Sans } from 'next/font/google';
 import React from 'react';
 import Container from './Container';
 import Feacard from './props/Feacard';
@@ -14,10 +14,6 @@ const josef = Josefin_Sans({
     weight: ['200', '400', '700'],
 });
 
-const lato = Lato({
-    subsets: ['latin'],
-    weight: ['100', '400', '700'],
-});
 
 const Feapro = async (item, index) => {
     let { products } = await api("https://dummyjson.com/products");

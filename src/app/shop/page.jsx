@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useContext } from 'react'
+import React from 'react'
 import { Josefin_Sans, Lato } from 'next/font/google';
 import Container from '@/components/Container';
 import { LuLayoutGrid } from "react-icons/lu";
