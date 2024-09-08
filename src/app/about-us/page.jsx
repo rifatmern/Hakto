@@ -53,7 +53,7 @@ const page = () => {
                     <div className="text-center">
                         <div className={`${lato.className} mt-[40px]`}>
                             <h3 className={`${Josef.className} font-bold text-[36px] text-[#0D0E43]`}>Our Client Say!</h3>
-                            <Image className='ml-[50%] translate-x-[-50%] mt-[20px]' src={client} alt="Client Image" />
+                            <Image className='ml-[50%] translate-x-[-50%] mt-[20px]' src={client} alt="Client_Image" />
                             <h4 className=' font-bold text-[16px] text-[#0D0E43] mt-[20px]'>Selina Gomez</h4>
                             <h4 className='font-semibold text-[14px] text-[#8A8FB9]'>Ceo At Webecy Digital</h4>
                             <p className=' font-semibold text-[14px] text-[#8A8FB9] mt-[20px] lg:w-[40%] w-full ml-[50%] translate-x-[-50%]'>
