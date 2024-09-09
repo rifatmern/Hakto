@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Container from './Container';
 import Image from 'next/image';
 import logo from "@/assets/Hekto.png";
 import { Lato } from 'next/font/google';
 import Link from 'next/link';
 import { CiSearch } from "react-icons/ci";
+import { useRouter } from 'next/navigation'; // Import the useRouter hook
 
 const lato = Lato({
     subsets: ["latin"],
@@ -19,6 +20,22 @@ const Navbar = () => {
     const [focusedIndex, setFocusedIndex] = useState(-1);
     const [hoveredProduct, setHoveredProduct] = useState(null);
     const searchResultsRef = useRef(null);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const router = useRouter(); // Initialize useRouter
+
+    // Function to handle scroll
+    const handleScroll = () => {
+        if (window.scrollY > 100) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const fetchProducts = async (query) => {
         try {
@@ -38,7 +55,7 @@ const Navbar = () => {
         if (query.trim()) {
             fetchProducts(query);
         } else {
-            setSearchFilter([]); // Clear suggestions if the query is empty
+            setSearchFilter([]);
         }
     };
 
@@ -84,8 +101,13 @@ const Navbar = () => {
         setHoveredProduct(null);
     };
 
+    const handleProductClick = (productId) => {
+        // Navigate to the product details page using the product ID
+        router.push(`/product/${productId}`);
+    };
+
     return (
-        <section className='py-3'>
+        <section className={`py-3 transition-all duration-500 ${isScrolled ? 'fixed top-0 left-0 w-full bg-white shadow-lg z-50' : 'relative'}`}>
             <Container>
                 <div className="flex justify-between items-center">
                     <div>
@@ -94,7 +116,7 @@ const Navbar = () => {
                     <div>
                         <ul className={`${lato.className} flex gap-x-6 items-center`}>
                             <li className="hover:text-[#FB2E86]"><Link href="/">Home</Link></li>
-                            <li className="hover:text-[#FB2E86]"><Link href="/about-us">Pages</Link></li>
+                            <li className="hover:text-[#FB2E86]"><Link href="/about-us">About Us</Link></li>
                             <li className="hover:text-[#FB2E86]"><Link href="/shop">Products</Link></li>
                             <li className="hover:text-[#FB2E86]"><Link href="/blog">Blog</Link></li>
                             <li className="hover:text-[#FB2E86]"><Link href="/shop">Shop</Link></li>
@@ -108,7 +130,7 @@ const Navbar = () => {
                                 placeholder="Search..."
                                 value={searchInput}
                                 onChange={handleInputChange}
-                                onFocus={handleFocus}  // Show suggestions on focus
+                                onFocus={handleFocus}
                                 onKeyDown={handleKeyDown}
                                 className='w-[266px] h-[40px] outline-none border border-gray-400 px-2'
                             />
@@ -117,8 +139,6 @@ const Navbar = () => {
                                 className='w-[40px] bg-[#FB2E86] h-[40px] py-[10px] text-white cursor-pointer'
                             />
                         </div>
-
-                        {/* Display search suggestions */}
                         {searchFilter.length > 0 && (
                             <div
                                 ref={searchResultsRef}
@@ -130,18 +150,13 @@ const Navbar = () => {
                                         className={`p-2 cursor-pointer ${focusedIndex === index ? 'bg-gray-200' : ''}`}
                                         onMouseEnter={() => handleMouseEnter(item)}
                                         onMouseLeave={handleMouseLeave}
-                                        onMouseDown={() => {
-                                            setSearchInput(item.title);
-                                            setSearchFilter([]);
-                                        }}
+                                        onMouseDown={() => handleProductClick(item.id)} // Navigate on product click
                                     >
                                         {item.title}
                                     </div>
                                 ))}
                             </div>
                         )}
-
-                        {/* Show product preview */}
                         {hoveredProduct && (
                             <div className="absolute top-[calc(100%+8px)] left-0 w-[266px] bg-white shadow-lg p-4 z-20 border border-gray-300">
                                 <div className="flex items-center">

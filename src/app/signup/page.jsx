@@ -1,11 +1,14 @@
-"use client"
+"use client";
+import React, { useState } from 'react';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import Container from '@/components/Container';
 import { Josefin_Sans, Lato } from 'next/font/google';
 import Link from 'next/link';
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
-import React, { useState } from 'react';
 import Image from 'next/image';
 import sponsor from '@/assets/sponsor.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const josef = Josefin_Sans({
     subsets: ["latin"],
@@ -20,6 +23,10 @@ const lato = Lato({
 const Signup = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [error, setError] = useState("");
 
     const togglePasswordVisibility = (field) => {
         if (field === 'password') {
@@ -29,12 +36,31 @@ const Signup = () => {
         }
     };
 
+    const handleSignUp = async (e) => {
+        e.preventDefault();
+        if (password !== confirmPassword) {
+            setError("Passwords do not match");
+            return;
+        }
+
+        const auth = getAuth();
+        try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            toast.success("Signup successful!");
+            // Redirect or take any other action you need after signup
+        } catch (error) {
+            setError(error.message);
+            toast.error(`Signup failed: ${error.message}`);
+        }
+    };
+
     const handleGoogleSignIn = () => {
-        window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=${encodeURIComponent(window.location.origin + '/auth/callback')}&response_type=code&scope=email%20profile`;
+        // Handle Google Sign-in
     };
 
     return (
         <>
+            <ToastContainer />
             <section>
                 <div className="pt-[98px] pb-[126px] bg-[rgba(246,245,255,1)]">
                     <Container>
@@ -57,7 +83,7 @@ const Signup = () => {
                             <p className='text-[#9096B2] text-[17px] mb-[57px]'>
                                 Please create an account using the form below.
                             </p>
-                            <form className="space-y-4 md:space-y-6" action="#">
+                            <form className="space-y-4 md:space-y-6" onSubmit={handleSignUp}>
                                 <div>
                                     <input
                                         type="text"
@@ -65,7 +91,7 @@ const Signup = () => {
                                         id="username"
                                         className="w-[432px] bg-gray-50 border border-gray-300 text-gray-900 focus:ring-primary-600 focus:border-primary-600 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="Username"
-                                        required=""
+                                        required
                                     />
                                 </div>
                                 <div>
@@ -73,9 +99,11 @@ const Signup = () => {
                                         type="email"
                                         name="email"
                                         id="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
                                         className="w-[432px] bg-gray-50 border border-gray-300 text-gray-900 focus:ring-primary-600 focus:border-primary-600 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="Email Address"
-                                        required=""
+                                        required
                                     />
                                 </div>
                                 <div className="relative">
@@ -83,9 +111,11 @@ const Signup = () => {
                                         name="password"
                                         id="password"
                                         type={showPassword ? "text" : "password"}
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
                                         placeholder="Password"
                                         className="bg-gray-50 border border-gray-300 text-gray-900 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        required=""
+                                        required
                                     />
                                     <div
                                         className="absolute top-[50%] translate-y-[-50%] right-[3%] cursor-pointer text-[20px]"
@@ -99,9 +129,11 @@ const Signup = () => {
                                         name="confirmPassword"
                                         id="confirmPassword"
                                         type={showConfirmPassword ? "text" : "password"}
+                                        value={confirmPassword}
+                                        onChange={(e) => setConfirmPassword(e.target.value)}
                                         placeholder="Confirm Password"
                                         className="bg-gray-50 border border-gray-300 text-gray-900 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        required=""
+                                        required
                                     />
                                     <div
                                         className="absolute top-[50%] translate-y-[-50%] right-[3%] cursor-pointer text-[20px]"
@@ -110,6 +142,7 @@ const Signup = () => {
                                         {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
                                     </div>
                                 </div>
+                                {error && <p className="text-red-500">{error}</p>}
                                 <button
                                     type="submit"
                                     className="w-full text-[#FFF] font-semibold bg-[#FB2E86] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
@@ -117,24 +150,21 @@ const Signup = () => {
                                     Sign Up
                                 </button>
                                 <div className="flex items-center justify-center mt-[20px]">
-                                <button
-                                    onClick={handleGoogleSignIn}
-                                    className="flex items-center justify-center w-full bg-[#b2b4b9] text-white font-semibold py-2 px-4 rounded hover:bg-[#357ae8] focus:outline-none focus:ring-4 focus:ring-[#357ae8] text-sm"
-                                >
-                                    <FaGoogle className="mr-2" />
-                                    Sign up with Google
-                                </button>
-                            </div>
+                                    <button
+                                        onClick={handleGoogleSignIn}
+                                        className="flex items-center justify-center w-full bg-[#b2b4b9] text-white font-semibold py-2 px-4 rounded hover:bg-[#357ae8] focus:outline-none focus:ring-4 focus:ring-[#357ae8] text-sm"
+                                    >
+                                        <FaGoogle className="mr-2" />
+                                        Sign up with Google
+                                    </button>
+                                </div>
                                 <p className="font-normal text-[#9096B2] dark:text-gray-400">
                                     Already have an Account?
-                                    <Link
-                                        href="/login"
-                                        className="font-medium text-primary-600 text-[#9096B2] hover:underline dark:text-primary-500">
+                                    <Link href="/login" className="font-medium text-primary-600 text-[#9096B2] hover:underline dark:text-primary-500">
                                         Log in
                                     </Link>
                                 </p>
                             </form>
-                            
                         </div>
                     </div>
                 </div>
